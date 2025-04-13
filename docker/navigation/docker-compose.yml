@@ -1,0 +1,28 @@
+x-args-defaults:
+  &args-defaults
+  UID: 1000
+  GID: 1000
+  TAG: base
+  NUM_THREADS: 8
+  DISTRO: humble
+  http_proxy: ""
+  https_proxy: ""
+
+x-build-defaults:
+ &build-defaults
+  context: .
+  dockerfile: Dockerfile
+  # additional_contexts:
+  #   src_ctx: ../workspace
+  args:
+    <<: *args-defaults
+
+services:
+  nav_stack:
+    image: humble/nav_stack:base
+    build:
+      <<: *build-defaults
+      args:
+        <<: *args-defaults
+        CONTAINER_NAME: nav_stack
+      target: nav-stack-release
