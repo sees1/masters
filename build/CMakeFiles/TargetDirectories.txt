@@ -1,5 +1,5 @@
-/home/sees/CommLineProg/work/masters/build/CMakeFiles/chat_client.dir
-/home/sees/CommLineProg/work/masters/build/CMakeFiles/chat_server.dir
+/home/sees/CommLineProg/work/masters/build/CMakeFiles/main_window.dir
+/home/sees/CommLineProg/work/masters/build/CMakeFiles/server.dir
 /home/sees/CommLineProg/work/masters/build/CMakeFiles/edit_cache.dir
 /home/sees/CommLineProg/work/masters/build/CMakeFiles/rebuild_cache.dir
 /home/sees/CommLineProg/work/masters/build/CMakeFiles/list_install_components.dir

@@ -1,0 +1,5 @@
+-I/home/sees/CommLineProg/work/masters/include
+-I/usr/include
+-o
+/home/sees/CommLineProg/work/masters/build/include/client/gui/moc_server_container_create_box.cpp
+/home/sees/CommLineProg/work/masters/include/client/gui/server_container_create_box.hpp

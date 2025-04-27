@@ -1,0 +1,2 @@
+/usr/local/bin/main_window
+/usr/local/bin/server

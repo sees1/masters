@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/chat_client.dir/src/client.cpp.o -o chat_client  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 -lpthread

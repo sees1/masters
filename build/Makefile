@@ -162,78 +162,426 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named chat_client
+# Target rules for targets named main_window
 
 # Build rule for target.
-chat_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chat_client
-.PHONY : chat_client
+main_window: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_window
+.PHONY : main_window
 
 # fast build rule for target.
-chat_client/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/build
-.PHONY : chat_client/fast
+main_window/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/build
+.PHONY : main_window/fast
 
 #=============================================================================
-# Target rules for targets named chat_server
+# Target rules for targets named server
 
 # Build rule for target.
-chat_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chat_server
-.PHONY : chat_server
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-chat_server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/build
-.PHONY : chat_server/fast
+server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
-src/client.o: src/client.cpp.o
-.PHONY : src/client.o
-
-# target to build an object file
-src/client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client.cpp.o
-.PHONY : src/client.cpp.o
-
-src/client.i: src/client.cpp.i
-.PHONY : src/client.i
-
-# target to preprocess a source file
-src/client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client.cpp.i
-.PHONY : src/client.cpp.i
-
-src/client.s: src/client.cpp.s
-.PHONY : src/client.s
-
-# target to generate assembly for a file
-src/client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client.cpp.s
-.PHONY : src/client.cpp.s
-
-src/server.o: src/server.cpp.o
-.PHONY : src/server.o
+include/client/gui/moc_main_window.o: include/client/gui/moc_main_window.cpp.o
+.PHONY : include/client/gui/moc_main_window.o
 
 # target to build an object file
-src/server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.o
-.PHONY : src/server.cpp.o
+include/client/gui/moc_main_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_main_window.cpp.o
+.PHONY : include/client/gui/moc_main_window.cpp.o
 
-src/server.i: src/server.cpp.i
-.PHONY : src/server.i
+include/client/gui/moc_main_window.i: include/client/gui/moc_main_window.cpp.i
+.PHONY : include/client/gui/moc_main_window.i
 
 # target to preprocess a source file
-src/server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.i
-.PHONY : src/server.cpp.i
+include/client/gui/moc_main_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_main_window.cpp.i
+.PHONY : include/client/gui/moc_main_window.cpp.i
 
-src/server.s: src/server.cpp.s
-.PHONY : src/server.s
+include/client/gui/moc_main_window.s: include/client/gui/moc_main_window.cpp.s
+.PHONY : include/client/gui/moc_main_window.s
 
 # target to generate assembly for a file
-src/server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.s
-.PHONY : src/server.cpp.s
+include/client/gui/moc_main_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_main_window.cpp.s
+.PHONY : include/client/gui/moc_main_window.cpp.s
+
+include/client/gui/moc_server_container_create_box.o: include/client/gui/moc_server_container_create_box.cpp.o
+.PHONY : include/client/gui/moc_server_container_create_box.o
+
+# target to build an object file
+include/client/gui/moc_server_container_create_box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_container_create_box.cpp.o
+.PHONY : include/client/gui/moc_server_container_create_box.cpp.o
+
+include/client/gui/moc_server_container_create_box.i: include/client/gui/moc_server_container_create_box.cpp.i
+.PHONY : include/client/gui/moc_server_container_create_box.i
+
+# target to preprocess a source file
+include/client/gui/moc_server_container_create_box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_container_create_box.cpp.i
+.PHONY : include/client/gui/moc_server_container_create_box.cpp.i
+
+include/client/gui/moc_server_container_create_box.s: include/client/gui/moc_server_container_create_box.cpp.s
+.PHONY : include/client/gui/moc_server_container_create_box.s
+
+# target to generate assembly for a file
+include/client/gui/moc_server_container_create_box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_container_create_box.cpp.s
+.PHONY : include/client/gui/moc_server_container_create_box.cpp.s
+
+include/client/gui/moc_server_credental_box.o: include/client/gui/moc_server_credental_box.cpp.o
+.PHONY : include/client/gui/moc_server_credental_box.o
+
+# target to build an object file
+include/client/gui/moc_server_credental_box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_credental_box.cpp.o
+.PHONY : include/client/gui/moc_server_credental_box.cpp.o
+
+include/client/gui/moc_server_credental_box.i: include/client/gui/moc_server_credental_box.cpp.i
+.PHONY : include/client/gui/moc_server_credental_box.i
+
+# target to preprocess a source file
+include/client/gui/moc_server_credental_box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_credental_box.cpp.i
+.PHONY : include/client/gui/moc_server_credental_box.cpp.i
+
+include/client/gui/moc_server_credental_box.s: include/client/gui/moc_server_credental_box.cpp.s
+.PHONY : include/client/gui/moc_server_credental_box.s
+
+# target to generate assembly for a file
+include/client/gui/moc_server_credental_box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_credental_box.cpp.s
+.PHONY : include/client/gui/moc_server_credental_box.cpp.s
+
+include/client/gui/moc_server_error_box.o: include/client/gui/moc_server_error_box.cpp.o
+.PHONY : include/client/gui/moc_server_error_box.o
+
+# target to build an object file
+include/client/gui/moc_server_error_box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_error_box.cpp.o
+.PHONY : include/client/gui/moc_server_error_box.cpp.o
+
+include/client/gui/moc_server_error_box.i: include/client/gui/moc_server_error_box.cpp.i
+.PHONY : include/client/gui/moc_server_error_box.i
+
+# target to preprocess a source file
+include/client/gui/moc_server_error_box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_error_box.cpp.i
+.PHONY : include/client/gui/moc_server_error_box.cpp.i
+
+include/client/gui/moc_server_error_box.s: include/client/gui/moc_server_error_box.cpp.s
+.PHONY : include/client/gui/moc_server_error_box.s
+
+# target to generate assembly for a file
+include/client/gui/moc_server_error_box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_error_box.cpp.s
+.PHONY : include/client/gui/moc_server_error_box.cpp.s
+
+include/client/gui/moc_server_widget.o: include/client/gui/moc_server_widget.cpp.o
+.PHONY : include/client/gui/moc_server_widget.o
+
+# target to build an object file
+include/client/gui/moc_server_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_widget.cpp.o
+.PHONY : include/client/gui/moc_server_widget.cpp.o
+
+include/client/gui/moc_server_widget.i: include/client/gui/moc_server_widget.cpp.i
+.PHONY : include/client/gui/moc_server_widget.i
+
+# target to preprocess a source file
+include/client/gui/moc_server_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_widget.cpp.i
+.PHONY : include/client/gui/moc_server_widget.cpp.i
+
+include/client/gui/moc_server_widget.s: include/client/gui/moc_server_widget.cpp.s
+.PHONY : include/client/gui/moc_server_widget.s
+
+# target to generate assembly for a file
+include/client/gui/moc_server_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/include/client/gui/moc_server_widget.cpp.s
+.PHONY : include/client/gui/moc_server_widget.cpp.s
+
+src/client/client.o: src/client/client.cpp.o
+.PHONY : src/client/client.o
+
+# target to build an object file
+src/client/client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/client.cpp.o
+.PHONY : src/client/client.cpp.o
+
+src/client/client.i: src/client/client.cpp.i
+.PHONY : src/client/client.i
+
+# target to preprocess a source file
+src/client/client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/client.cpp.i
+.PHONY : src/client/client.cpp.i
+
+src/client/client.s: src/client/client.cpp.s
+.PHONY : src/client/client.s
+
+# target to generate assembly for a file
+src/client/client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/client.cpp.s
+.PHONY : src/client/client.cpp.s
+
+src/client/main.o: src/client/main.cpp.o
+.PHONY : src/client/main.o
+
+# target to build an object file
+src/client/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/main.cpp.o
+.PHONY : src/client/main.cpp.o
+
+src/client/main.i: src/client/main.cpp.i
+.PHONY : src/client/main.i
+
+# target to preprocess a source file
+src/client/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/main.cpp.i
+.PHONY : src/client/main.cpp.i
+
+src/client/main.s: src/client/main.cpp.s
+.PHONY : src/client/main.s
+
+# target to generate assembly for a file
+src/client/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/client/main.cpp.s
+.PHONY : src/client/main.cpp.s
+
+src/server/main.o: src/server/main.cpp.o
+.PHONY : src/server/main.o
+
+# target to build an object file
+src/server/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.o
+.PHONY : src/server/main.cpp.o
+
+src/server/main.i: src/server/main.cpp.i
+.PHONY : src/server/main.i
+
+# target to preprocess a source file
+src/server/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.i
+.PHONY : src/server/main.cpp.i
+
+src/server/main.s: src/server/main.cpp.s
+.PHONY : src/server/main.s
+
+# target to generate assembly for a file
+src/server/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.s
+.PHONY : src/server/main.cpp.s
+
+src/server/message_handler.o: src/server/message_handler.cpp.o
+.PHONY : src/server/message_handler.o
+
+# target to build an object file
+src/server/message_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/message_handler.cpp.o
+.PHONY : src/server/message_handler.cpp.o
+
+src/server/message_handler.i: src/server/message_handler.cpp.i
+.PHONY : src/server/message_handler.i
+
+# target to preprocess a source file
+src/server/message_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/message_handler.cpp.i
+.PHONY : src/server/message_handler.cpp.i
+
+src/server/message_handler.s: src/server/message_handler.cpp.s
+.PHONY : src/server/message_handler.s
+
+# target to generate assembly for a file
+src/server/message_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/message_handler.cpp.s
+.PHONY : src/server/message_handler.cpp.s
+
+src/server/server.o: src/server/server.cpp.o
+.PHONY : src/server/server.o
+
+# target to build an object file
+src/server/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.o
+.PHONY : src/server/server.cpp.o
+
+src/server/server.i: src/server/server.cpp.i
+.PHONY : src/server/server.i
+
+# target to preprocess a source file
+src/server/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.i
+.PHONY : src/server/server.cpp.i
+
+src/server/server.s: src/server/server.cpp.s
+.PHONY : src/server/server.s
+
+# target to generate assembly for a file
+src/server/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.s
+.PHONY : src/server/server.cpp.s
+
+src/utils/NetCodec/client_codec.o: src/utils/NetCodec/client_codec.cpp.o
+.PHONY : src/utils/NetCodec/client_codec.o
+
+# target to build an object file
+src/utils/NetCodec/client_codec.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/client_codec.cpp.o
+.PHONY : src/utils/NetCodec/client_codec.cpp.o
+
+src/utils/NetCodec/client_codec.i: src/utils/NetCodec/client_codec.cpp.i
+.PHONY : src/utils/NetCodec/client_codec.i
+
+# target to preprocess a source file
+src/utils/NetCodec/client_codec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/client_codec.cpp.i
+.PHONY : src/utils/NetCodec/client_codec.cpp.i
+
+src/utils/NetCodec/client_codec.s: src/utils/NetCodec/client_codec.cpp.s
+.PHONY : src/utils/NetCodec/client_codec.s
+
+# target to generate assembly for a file
+src/utils/NetCodec/client_codec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/client_codec.cpp.s
+.PHONY : src/utils/NetCodec/client_codec.cpp.s
+
+src/utils/NetCodec/codec.o: src/utils/NetCodec/codec.cpp.o
+.PHONY : src/utils/NetCodec/codec.o
+
+# target to build an object file
+src/utils/NetCodec/codec.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/codec.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/codec.cpp.o
+.PHONY : src/utils/NetCodec/codec.cpp.o
+
+src/utils/NetCodec/codec.i: src/utils/NetCodec/codec.cpp.i
+.PHONY : src/utils/NetCodec/codec.i
+
+# target to preprocess a source file
+src/utils/NetCodec/codec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/codec.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/codec.cpp.i
+.PHONY : src/utils/NetCodec/codec.cpp.i
+
+src/utils/NetCodec/codec.s: src/utils/NetCodec/codec.cpp.s
+.PHONY : src/utils/NetCodec/codec.s
+
+# target to generate assembly for a file
+src/utils/NetCodec/codec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/codec.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/codec.cpp.s
+.PHONY : src/utils/NetCodec/codec.cpp.s
+
+src/utils/NetCodec/decoder.o: src/utils/NetCodec/decoder.cpp.o
+.PHONY : src/utils/NetCodec/decoder.o
+
+# target to build an object file
+src/utils/NetCodec/decoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/decoder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/decoder.cpp.o
+.PHONY : src/utils/NetCodec/decoder.cpp.o
+
+src/utils/NetCodec/decoder.i: src/utils/NetCodec/decoder.cpp.i
+.PHONY : src/utils/NetCodec/decoder.i
+
+# target to preprocess a source file
+src/utils/NetCodec/decoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/decoder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/decoder.cpp.i
+.PHONY : src/utils/NetCodec/decoder.cpp.i
+
+src/utils/NetCodec/decoder.s: src/utils/NetCodec/decoder.cpp.s
+.PHONY : src/utils/NetCodec/decoder.s
+
+# target to generate assembly for a file
+src/utils/NetCodec/decoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/decoder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/decoder.cpp.s
+.PHONY : src/utils/NetCodec/decoder.cpp.s
+
+src/utils/NetCodec/encoder.o: src/utils/NetCodec/encoder.cpp.o
+.PHONY : src/utils/NetCodec/encoder.o
+
+# target to build an object file
+src/utils/NetCodec/encoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/encoder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/encoder.cpp.o
+.PHONY : src/utils/NetCodec/encoder.cpp.o
+
+src/utils/NetCodec/encoder.i: src/utils/NetCodec/encoder.cpp.i
+.PHONY : src/utils/NetCodec/encoder.i
+
+# target to preprocess a source file
+src/utils/NetCodec/encoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/encoder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/encoder.cpp.i
+.PHONY : src/utils/NetCodec/encoder.cpp.i
+
+src/utils/NetCodec/encoder.s: src/utils/NetCodec/encoder.cpp.s
+.PHONY : src/utils/NetCodec/encoder.s
+
+# target to generate assembly for a file
+src/utils/NetCodec/encoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/NetCodec/encoder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/encoder.cpp.s
+.PHONY : src/utils/NetCodec/encoder.cpp.s
+
+src/utils/NetCodec/server_codec.o: src/utils/NetCodec/server_codec.cpp.o
+.PHONY : src/utils/NetCodec/server_codec.o
+
+# target to build an object file
+src/utils/NetCodec/server_codec.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/server_codec.cpp.o
+.PHONY : src/utils/NetCodec/server_codec.cpp.o
+
+src/utils/NetCodec/server_codec.i: src/utils/NetCodec/server_codec.cpp.i
+.PHONY : src/utils/NetCodec/server_codec.i
+
+# target to preprocess a source file
+src/utils/NetCodec/server_codec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/server_codec.cpp.i
+.PHONY : src/utils/NetCodec/server_codec.cpp.i
+
+src/utils/NetCodec/server_codec.s: src/utils/NetCodec/server_codec.cpp.s
+.PHONY : src/utils/NetCodec/server_codec.s
+
+# target to generate assembly for a file
+src/utils/NetCodec/server_codec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/NetCodec/server_codec.cpp.s
+.PHONY : src/utils/NetCodec/server_codec.cpp.s
+
+src/utils/message.o: src/utils/message.cpp.o
+.PHONY : src/utils/message.o
+
+# target to build an object file
+src/utils/message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/message.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/message.cpp.o
+.PHONY : src/utils/message.cpp.o
+
+src/utils/message.i: src/utils/message.cpp.i
+.PHONY : src/utils/message.i
+
+# target to preprocess a source file
+src/utils/message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/message.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/message.cpp.i
+.PHONY : src/utils/message.cpp.i
+
+src/utils/message.s: src/utils/message.cpp.s
+.PHONY : src/utils/message.s
+
+# target to generate assembly for a file
+src/utils/message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_window.dir/build.make CMakeFiles/main_window.dir/src/utils/message.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/utils/message.cpp.s
+.PHONY : src/utils/message.cpp.s
 
 # Help Target
 help:
@@ -247,14 +595,56 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... chat_client"
-	@echo "... chat_server"
-	@echo "... src/client.o"
-	@echo "... src/client.i"
-	@echo "... src/client.s"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
+	@echo "... main_window"
+	@echo "... server"
+	@echo "... include/client/gui/moc_main_window.o"
+	@echo "... include/client/gui/moc_main_window.i"
+	@echo "... include/client/gui/moc_main_window.s"
+	@echo "... include/client/gui/moc_server_container_create_box.o"
+	@echo "... include/client/gui/moc_server_container_create_box.i"
+	@echo "... include/client/gui/moc_server_container_create_box.s"
+	@echo "... include/client/gui/moc_server_credental_box.o"
+	@echo "... include/client/gui/moc_server_credental_box.i"
+	@echo "... include/client/gui/moc_server_credental_box.s"
+	@echo "... include/client/gui/moc_server_error_box.o"
+	@echo "... include/client/gui/moc_server_error_box.i"
+	@echo "... include/client/gui/moc_server_error_box.s"
+	@echo "... include/client/gui/moc_server_widget.o"
+	@echo "... include/client/gui/moc_server_widget.i"
+	@echo "... include/client/gui/moc_server_widget.s"
+	@echo "... src/client/client.o"
+	@echo "... src/client/client.i"
+	@echo "... src/client/client.s"
+	@echo "... src/client/main.o"
+	@echo "... src/client/main.i"
+	@echo "... src/client/main.s"
+	@echo "... src/server/main.o"
+	@echo "... src/server/main.i"
+	@echo "... src/server/main.s"
+	@echo "... src/server/message_handler.o"
+	@echo "... src/server/message_handler.i"
+	@echo "... src/server/message_handler.s"
+	@echo "... src/server/server.o"
+	@echo "... src/server/server.i"
+	@echo "... src/server/server.s"
+	@echo "... src/utils/NetCodec/client_codec.o"
+	@echo "... src/utils/NetCodec/client_codec.i"
+	@echo "... src/utils/NetCodec/client_codec.s"
+	@echo "... src/utils/NetCodec/codec.o"
+	@echo "... src/utils/NetCodec/codec.i"
+	@echo "... src/utils/NetCodec/codec.s"
+	@echo "... src/utils/NetCodec/decoder.o"
+	@echo "... src/utils/NetCodec/decoder.i"
+	@echo "... src/utils/NetCodec/decoder.s"
+	@echo "... src/utils/NetCodec/encoder.o"
+	@echo "... src/utils/NetCodec/encoder.i"
+	@echo "... src/utils/NetCodec/encoder.s"
+	@echo "... src/utils/NetCodec/server_codec.o"
+	@echo "... src/utils/NetCodec/server_codec.i"
+	@echo "... src/utils/NetCodec/server_codec.s"
+	@echo "... src/utils/message.o"
+	@echo "... src/utils/message.i"
+	@echo "... src/utils/message.s"
 .PHONY : help
 
 
