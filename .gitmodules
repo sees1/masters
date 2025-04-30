@@ -1,0 +1,7 @@
+[submodule "dep/docker_cpp"]
+	path = dep/docker_cpp
+	url = https://github.com/sees1/docker_cpp
+	branch = masters_version
+[submodule "dep/asl"]
+	path = dep/asl
+	url = https://github.com/aslze/asl.git

@@ -10,7 +10,6 @@ option(MASTERS_BUILD_CLIENT "Build net client + gui" ON)
 # set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-
 find_package(Boost COMPONENTS system)
 
 # docker engine dependency
