@@ -13,8 +13,8 @@ Features:
 
 * Requirements:
     *  List of corresponding robo container that you can build via this project executables should be specified in `index.txt` at `docker/build-context` folder in key value form, where key - name of future image(with `ros2` tag) and value - target from your `Dockerfile` . 
-    *  Content of `docker` folder must follow a strict scheme:  [![server](https://github.com/sees1/masters/images/docker_folder_schema.png)] Here in you can modify what mark green color. Note, that content of build-context should be compress as .tar extension after each modification inside build-context folder. After modify `Dockerfile` your should do corresponding modification in index.txt to reflect modification on client side in gui. `run` folder consist of only two folder, your can add launch and config folder each for one your `launch.py` and `.yaml` files.
-
+    *  Content of `docker` folder must follow a strict scheme (image below): Here in you can modify what mark green color. Note, that content of build-context should be compress as .tar extension after each modification inside build-context folder. After modify `Dockerfile` your should do corresponding modification in index.txt to reflect modification on client side in gui. `run` folder consist of only two folder, your can add launch and config folder each for one your `launch.py` and `.yaml` files.
+![server](images/docker_folder_schema.png)
 
 It contains:
 
