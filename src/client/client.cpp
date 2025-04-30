@@ -44,13 +44,39 @@ bool RoboClient::startContainer(std::string&& id,  MContainerSetting settings)
 	docker_cpp::CreateConfig conf;
 
 	conf.Image = id.substr(7);
-	conf.Cmd = settings.command_;
 	conf.Tty = settings.tty_;
+  conf.User = "docker_" + settings.container_username_;
 	conf.OpenStdin = true;
+  conf.NetworkDisabled = false;
+  conf.Entrypoint.push_back("bash");
+  conf.Entrypoint.push_back("-c");
+  std::string subcommand1 = "source /opt/ros/humble/setup.bash";
+  std::string subcommand4 = " && export ROS_DISCOVERY_SERVER=127.0.0.1:11811";
+  std::string subcommand2 = " && set -a && source /home/docker_" + settings.container_username_ + "/launch/up.env && set +a";
+  std::string subcommand3 = " && ros2 launch /home/docker_" + settings.container_username_ + "/launch/";
+  std::string command = subcommand1 + subcommand4 + subcommand3 + settings.launch_ + ".launch.py " + settings.arguments_;
+  conf.Cmd.push_back(command);
+  conf.hostConfig.networkMode = "host";
+  conf.hostConfig.autoRemove = false;
+  conf.hostConfig.privileged = true;
 
   json j = conf;
 
-  msg.data = settings.name_ + " " + j.dump();
+  msg.data = settings.container_username_ + " " + settings.launch_dir_ + " " + settings.name_ + " " + j.dump();
+
+  codec_->encode(msg);
+
+  std::shared_ptr<Message> resp = ready_msgs_->wait_pop_back();
+
+  return resp->data == "Success";
+}
+
+bool RoboClient::stopContainer(std::string&& id)
+{
+  Message msg;
+  msg.type = "Request";
+  msg.command = "stopRoboContainer";
+  msg.data = std::move(id);
 
   codec_->encode(msg);
 
@@ -86,6 +112,56 @@ bool RoboClient::createDDSInstance(int id)
   std::shared_ptr<Message> resp = ready_msgs_->wait_pop_back();
 
   return resp->data == "Success";
+}
+
+bool RoboClient::deleteRoboImage(std::string&& id)
+{
+  Message msg;
+  msg.type = "Request";
+  msg.command = "deleteRoboImage";
+  msg.data = std::move(id);
+
+  codec_->encode(msg);
+
+  std::shared_ptr<Message> resp = ready_msgs_->wait_pop_back();
+
+  return resp->data == "Success";
+}
+
+bool RoboClient::buildRoboImage(std::string&& name, std::string&& target, std::string&& username)
+{
+  Message msg;
+  msg.type = "Request";
+  msg.command = "buildRoboImage";
+  msg.data = std::move(name);
+  msg.data += " ";
+  msg.data += std::move(target);
+  msg.data += " "; 
+  msg.data += std::move(username);
+
+  codec_->encode(msg);
+
+  std::shared_ptr<Message> resp = ready_msgs_->wait_pop_back();
+
+  return resp->data == "Success";
+}
+
+bool RoboClient::getRoboLog(std::string&& id, std::string& log)
+{
+  Message msg;
+  msg.type = "Request";
+  msg.command = "getRoboLog";
+  msg.data = std::move(id);
+
+  codec_->encode(msg);
+
+  std::shared_ptr<Message> resp = ready_msgs_->wait_pop_back();
+
+  size_t delim = resp->data.find(" ");
+  std::string result = resp->data.substr(0, delim);
+  log = resp->data.substr(delim + 1);
+
+  return result == "Success";
 }
 
 RoboClientCreator::RoboClientCreator()

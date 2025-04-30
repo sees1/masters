@@ -40,13 +40,20 @@ qt5_add_resources(QT_RESOURCE_FILES include/client/gui/resources/resource.qrc)
 
 qt5_wrap_cpp(main_window_lib include/client/gui/main_window.hpp
                              include/client/gui/server_widget.hpp
-                             include/client/gui/server_credental_box.hpp
-                             include/client/gui/server_container_create_box.hpp
-                             include/client/gui/server_error_box.hpp)
+                             include/client/gui/boxes/server_credental_box.hpp
+                             include/client/gui/boxes/server_container_create_box.hpp
+                             include/client/gui/boxes/server_info_box.hpp
+                             include/client/gui/boxes/server_image_build_box.hpp)
 
 add_executable(main_window ${main_window_lib} 
                             src/client/main.cpp
                             src/client/client.cpp
+                            src/client/gui/server_widget.cpp
+                            src/client/gui/main_window.cpp
+                            src/client/gui/boxes/server_container_create_box.cpp
+                            src/client/gui/boxes/server_credental_box.cpp
+                            src/client/gui/boxes/server_image_build_box.cpp
+                            src/client/gui/boxes/server_info_box.cpp
                             src/utils/NetCodec/client_codec.cpp
                             src/utils/NetCodec/codec.cpp
                             src/utils/NetCodec/decoder.cpp

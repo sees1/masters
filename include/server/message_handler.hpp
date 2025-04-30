@@ -65,11 +65,32 @@ public:
 
   virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
 
-  void ProcessDDS();
-
 private:
   std::optional<bp::child> disc_serv_;
 };
+
+class RoboDeleteImageExec : public Executor {
+public:
+  RoboDeleteImageExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
+  : Executor(docker_engine)
+  { }
+
+  virtual ~RoboDeleteImageExec() = default;
+
+  virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
+};
+
+class RoboBuildImageExec : public Executor {
+public:
+  RoboBuildImageExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
+  : Executor(docker_engine)
+  { }
+
+  virtual ~RoboBuildImageExec() = default;
+
+  virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
+};
+
 
 class RoboContainerInfoExec : public Executor {
 public:
@@ -93,6 +114,17 @@ public:
   virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
 };
 
+class RoboStopContainerExec : public Executor {
+public:
+  RoboStopContainerExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
+  : Executor(docker_engine)
+  { }
+
+  virtual ~RoboStopContainerExec() = default;
+
+  virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
+};
+
 class RoboStartedContainerInfoExec : public Executor {
 public:
   RoboStartedContainerInfoExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
@@ -105,13 +137,13 @@ public:
 };
 
 
-// class RoboContainerLogExec : public Executor {
-// public:
-//   RoboContainerLogExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
-//   : Executor(docker_engine)
-//   { }
+class RoboContainerLogExec : public Executor {
+public:
+  RoboContainerLogExec(std::shared_ptr<Docker<ASLHttp>> docker_engine)
+  : Executor(docker_engine)
+  { }
 
-//   virtual ~RoboContainerLogExec() = default;
+  virtual ~RoboContainerLogExec() = default;
 
-//   virtual std::shared_ptr<Message> execute() override;
-// };
+  virtual std::shared_ptr<Message> execute(std::shared_ptr<Message> msg) override;
+};

@@ -13,6 +13,10 @@ Encoder::Encoder()
   command_.insert(std::make_pair("execRoboContainer", 2));
   command_.insert(std::make_pair("getExecutedRoboContainer", 3));
   command_.insert(std::make_pair("execDDSServer", 4));
+  command_.insert(std::make_pair("deleteRoboImage", 5));
+  command_.insert(std::make_pair("buildRoboImage", 6));
+  command_.insert(std::make_pair("stopRoboContainer", 7));
+  command_.insert(std::make_pair("getRoboLog", 8));
 }
 
 SerializedMessage Encoder::encode(Message& msg)

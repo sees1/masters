@@ -1,0 +1,7 @@
+image: new_poligon_map.pgm
+resolution: 0.010000
+origin: [-20.364998, -20.364998, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

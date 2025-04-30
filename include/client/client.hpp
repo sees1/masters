@@ -16,9 +16,12 @@ public:
   std::pair<std::shared_ptr<std::map<std::string, std::string>>,
             std::shared_ptr<docker_cpp::ImageList>> getRoboContainersInfo();
   bool startContainer(std::string&& id, MContainerSetting settings);
+  bool stopContainer(std::string&& id);
   std::shared_ptr<docker_cpp::ContainerList> getExecutedContainers();
   bool createDDSInstance(int id);
-
+  bool deleteRoboImage(std::string&& id);
+  bool buildRoboImage(std::string&& name, std::string&& target, std::string&& username);
+  bool getRoboLog(std::string&& id, std::string& log);
 
 private:
   std::shared_ptr<ThreadsafeDeque<Message>> ready_msgs_;

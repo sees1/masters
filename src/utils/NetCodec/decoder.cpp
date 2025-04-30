@@ -12,6 +12,10 @@ Decoder::Decoder()
   inv_command_.insert(std::make_pair(2, "execRoboContainer"));
   inv_command_.insert(std::make_pair(3, "getExecutedRoboContainer"));
   inv_command_.insert(std::make_pair(4, "execDDSServer"));
+  inv_command_.insert(std::make_pair(5, "deleteRoboImage"));
+  inv_command_.insert(std::make_pair(6, "buildRoboImage"));
+  inv_command_.insert(std::make_pair(7, "stopRoboContainer"));
+  inv_command_.insert(std::make_pair(8, "getRoboLog"));
 }
 
 void Decoder::decodeHeader(SerializedMessage& msg)

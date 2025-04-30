@@ -1,7 +1,0 @@
-# Hashes of file build rules.
-ee21cbc1987fba89790133cc2f7afcb1 include/client/gui/moc_main_window.cpp
-cec21c4fb9a1f520a00a105181584e16 include/client/gui/moc_server_container_create_box.cpp
-91a26b20cf281a023b21865f8e7b5020 include/client/gui/moc_server_container_name_box.cpp
-db5acce2d2880dc3c99430f9264a9e62 include/client/gui/moc_server_credental_box.cpp
-51d81742c75f7d30fefda27e94ef7d6e include/client/gui/moc_server_error_box.cpp
-6963e345eae2b40080bdc64c6ca25ca8 include/client/gui/moc_server_widget.cpp

@@ -1,0 +1,7 @@
+image: maps_combine.png
+resolution: 0.050000
+origin: [-35.703232, -10.207190, 0.000000]
+negate: 1
+occupied_thresh: 0.5
+free_thresh: 0.1
+

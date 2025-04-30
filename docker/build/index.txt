@@ -1,5 +1,0 @@
-humble/amcl:ros2 amcl-release
-humble/nav_stack:ros2 nav-stack-release
-humble/rtabmap_ros:ros2 rtabmap-ros-release
-humble/slam_toolbox:ros2: slam-toolbox-release
-humble/map_server:ros2 map-server-release
